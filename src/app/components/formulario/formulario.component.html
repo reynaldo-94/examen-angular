@@ -1,0 +1,15 @@
+<h2>Ingrese sus datos:</h2>
+<hr/>
+<form id="formulario" #formulario="ngForm" (ngSubmit)="onSubmit()">
+
+    <p>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="user.nombre"  />
+    </p>
+    <p>
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" name="apellidos"  #apellidos="ngModel" [(ngModel)]="user.apellidos" />
+    </p>
+    <input type="hidden" name="id" #id="ngModel" [(ngModel)]="user.id" />
+    <input type="submit" value="Guardar" />
+</form>
